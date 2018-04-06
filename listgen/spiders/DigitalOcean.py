@@ -47,7 +47,3 @@ class DigitalOceanSpider(scrapy.Spider):
                          headers={'Authorization': 'token {}'.format(self.github_token),
                                   'Content-Type': 'application/json',
                                   'User-Agent': 'urllib3'})
-        if r.status == 200:
-            exit(0)
-        else:
-            exit(1)
